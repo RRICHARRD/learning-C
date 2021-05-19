@@ -15,8 +15,8 @@ int main(){
 	printf("length: %d\n", (int) sizeof(arabicNumbers) / sizeof(arabicNumbers[0]));
 	printf("length: %d\n", LENGTH(arabicNumbers));	
 	
-	char vogals[] = {'a','e','i','o','u'};
-	printf("length: %d\n", LENGTH(vogals));
+	char vowels[] = {'a','e','i','o','u'};
+	printf("length: %d\n", LENGTH(vowels));
 	
 	return 1;
 }
