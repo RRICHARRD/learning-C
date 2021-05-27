@@ -1,40 +1,57 @@
 #include<stdio.h>
 
-void showCharacters(char character, int times){
+void putSpacesBeforeWord(int totalSpaces){
+	int i;
+	for(i=1; i<=totalSpaces; i++)
+		printf("%c", (char)32);
+}
+
+void showCharacter(char character, int times){
 	int i;
 	for(i=1; i<=times; i++)
 		printf("%c", character);
 	putchar('\n');
 }
 
-void firstCharacter(int i, char character){
-	if(i==0)
-		printf("%c\t", (char)character);
+int arrayLength(char *word){
+	int i, length;
+	for(i=length=0; word[i]!='\0'; i++)
+		++length;		
+	return length;
 }
 
-void lastCharacter(char character){
-	printf("%c\n", character);
-}
-
-void showWord(char *word, int times, char character){
+void showWord(char *word){
 	int i;
-	for(i=0; word[i]!='\0';i++){
-		firstCharacter(i, character);
+	for(i=0; word[i]!='\0'; i++)
 		printf("%c", word[i]);
-	}
-		lastCharacter(character);
+	putchar('\n');
 }
 
-void title(char *word, char character, int times){
-	showCharacters(character, times);
-	showWord(word, times, character);
-	showCharacters(character, times);
+void buildTitle(char *word, char character){
+	showCharacter(character,arrayLength(word)+4);
+	putSpacesBeforeWord(2);
+	showWord(word);
+	showCharacter(character,arrayLength(word)+4);
 }
 
 int main(void){
 	
-	title("Richard", '+', 18);
+	char character; 
+	char *title = "PAYMENT";
 	
+	puts("Welcome, let's build you title theme...\n\n");
+		
+	printf("Your title is\n%c ", (char)26);
+	showWord(title);
+	
+	printf("\nDigit the character you want to use arround title\n%c ", (char)26);
+	scanf(" %c", &character);
+	
+	putchar('\n');
+	buildTitle(title, character);
+		
 	getch();
 	return 0;
 }
+
+
