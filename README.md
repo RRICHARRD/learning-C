@@ -20,3 +20,5 @@ Learning about C to study data structures in the future.
 ---
 ![mind map charapter 9](https://github.com/RRICHARRD/learning-C/blob/master/capitulo-9/mindMap-C9.png)
 ---
+![mind map charapter 11](https://github.com/RRICHARRD/learning-C/blob/master/capitulo-11/mindMap-C11.jpg)
+---
